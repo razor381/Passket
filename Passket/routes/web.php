@@ -10,9 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-// Route::get('/','Attendee\PublicPageController@index');
-
+Route::get ('/', 'PublicPageController@index');
 Route::group(
 	[
 		'namespace' => 'Attendee',
