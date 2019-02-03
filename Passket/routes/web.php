@@ -11,6 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/','Attendee\PublicPageController@index');
+
+Route::group(
+	[
+		'namespace' => 'Attendee',
+		'prefix' => 'attendee',
+	],
+	function() {
+
+		Route::get('/', 'PublicPageController@index');
+		Route::get('event-detail', 'PublicPageController@eventDetail');
+		Route::get('event-list', 'PublicPageController@eventList');
+		Route::get('event-book', 'PublicPageController@eventBook');
+	}
+);
