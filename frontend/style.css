@@ -23,11 +23,3 @@ html, body {
 .white-text {
 	color: white !important;
 }
-
-.fitting-width {
-	/*width: 3rem;*/
-}
-
-.glow:hover {
-	color: #3498db !important;
-}
