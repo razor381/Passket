@@ -22,5 +22,9 @@ class PublicPageController extends Controller
 	public function eventList() {
 		return view('pages.frontend.pages.event-list');
 	}
-	
+
+	public function createEvent() {
+		return view('pages.frontend.pages.create-event');
+	}
+
 }

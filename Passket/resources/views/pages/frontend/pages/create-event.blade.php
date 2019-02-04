@@ -369,10 +369,18 @@
 							</div>
 							<!-- billing-info - end -->
 							</div>
-							<div class="col-md-2"></div>						
-
-							
 						</div>
 					</div>
 					<!-- booking-content-wrapper - end -->
+
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
 @endsection
