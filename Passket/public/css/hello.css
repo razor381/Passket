@@ -1,0 +1,14 @@
+	body, html {
+		background: #222;
+	}
+
+	.blue-background {
+		background-color: #666;
+		color: white;
+		font-family: 'Fira Sans';
+		display: inline-block;
+		padding: 1.5rem 2rem;
+		margin-top: 1rem;
+		margin-left: 1rem;
+		border-radius: .4rem;
+	}

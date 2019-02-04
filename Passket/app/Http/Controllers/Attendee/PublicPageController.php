@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Attendee;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+
 class PublicPageController extends Controller
 {
 	public function index() {
@@ -22,4 +23,5 @@ class PublicPageController extends Controller
 	public function eventList() {
 		return view('pages.frontend.pages.event-list');
 	}
+
 }
