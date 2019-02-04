@@ -4,7 +4,6 @@
 <!-- header-section - start
 	================================================== -->
     <header id="header-section" class="header-section scrolltop-fixed-header-section not-stuck clearfix">
-
         <!-- header-bottom - start -->
         <div class="container">
             <div class="header-bottom">
