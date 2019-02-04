@@ -10,8 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get ('/', 'PublicPageController@index');
-Route::group(
+
+Route::get('/', 'PublicPageController@index');
+Route::get('event-detail', 'PublicPageController@eventDetail');
+Route::get('event-list', 'PublicPageController@eventList');
+Route::get('event-book', 'PublicPageController@eventBook');
+
+/*Route::group(
 	[
 		'namespace' => 'Attendee',
 		'prefix' => 'attendee',
@@ -23,4 +28,4 @@ Route::group(
 		Route::get('event-list', 'PublicPageController@eventList');
 		Route::get('event-book', 'PublicPageController@eventBook');
 	}
-);
+);*/
