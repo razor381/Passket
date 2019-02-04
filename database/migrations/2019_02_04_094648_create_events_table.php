@@ -18,22 +18,25 @@ class CreateEventsTable extends Migration
             $table->string('event_name');
             $table->string('event_address');
             $table->string('event_venue-name');
-            $table->string('event_category');
+            $table->string('event_category')->nullable;
             $table->string('event_detail');
             $table->string('event_started_at');
-            $table->string('event_ended_at');
+            $table->string('event_ends_at');
             $table->string('organizer_name');
             $table->string('organizer_email');
             $table->string('organizer_contact_number');
             $table->string('organizer_detail');
             $table->string('ticket_name');
-            $table->string('ticket_number');
-            $table->string('ticket_max_number');
+            $table->string('ticket_number')->nullable;
+            $table->string('ticket_max_number')->nullable;
             $table->string('ticket_min_number');
-            $table->string('ticket_category');
-            $table->string('ticket_expiry_date');
-            $table->string('ticket_cover');
-
+            $table->string('ticket_category')->nullable;
+            $table->string('ticket_expiry_date')->nullable;
+            $table->string('ticket_cover')->nullable;
+            $table->boolean('is_active')->default(true);
+            $table->string('remarks')->nullable;
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
