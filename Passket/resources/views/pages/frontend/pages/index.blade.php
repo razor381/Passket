@@ -2,11 +2,6 @@
 
 @section('content')
 
-
-
-
-	
-
 <!-- slide-section - start
 	================================================== -->
 
@@ -3625,9 +3620,6 @@
 										<h3>Barcelona Friday Food Truck Festival 26 Mei 2019</h3>
 										<span>26 June 2018</span>
 									</div>
-									<p class="m-0">
-										Harmoni gives you everything you need to host your best event yet. lorem ipsum diamet.
-									</p>
 								</div>
 							</div>
 							<!-- latest-blog - end -->
@@ -3643,9 +3635,9 @@
 										<h3>Barcelona Friday Food Truck Festival 26 Mei 2019</h3>
 										<span>26 June 2018</span>
 									</div>
-									<p class="m-0">
+									<!-- <p class="m-0">
 										Harmoni gives you everything you need to host your best event yet. lorem ipsum diamet.
-									</p>
+									</p> -->
 								</div>
 							</div>
 							<!-- latest-blog - end -->
