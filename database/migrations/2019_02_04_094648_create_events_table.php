@@ -35,7 +35,7 @@ class CreateEventsTable extends Migration
             $table->string('ticket_cover')->nullable;
             $table->boolean('is_active')->default(true);
             $table->string('remarks')->nullable;
-            $table->integet('user_id')->unsigned();
+            $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
