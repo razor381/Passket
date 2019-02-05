@@ -373,7 +373,7 @@
 					</div>
 					<!-- booking-content-wrapper - end -->
 
-				</form>
+				</form>	
 			</div>
 		</div>
 	</div>

@@ -25,6 +25,7 @@
 	<script src="assets/js/jarallax.min.js"></script>
 	<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script src="assets/js/lightcase.js"></script>
+	
 
 	<!-- gallery img loaded - jqury include -->
 	<script src="assets/js/imagesloaded.pkgd.min.js"></script>
@@ -40,7 +41,7 @@
 	<!-- custom jquery include -->
 	<script src="assets/js/custom.js"></script>
 
-
+	@yield('scripts')
 
 </body>
 </html>	
