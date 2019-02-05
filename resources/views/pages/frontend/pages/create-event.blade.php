@@ -121,47 +121,7 @@
 			                                            </div>
 			                                            <li>
 			                                                <div class="form-item">
-			                                                   {{--  <select class="country-select">
-			                                                        <option selected="">Year</option>
-			                                                        <option>option 1</option>
-			                                                        <option>option 2</option>
-			                                                        <option>option 3</option>
-			                                                        <option>option 4</option>
-			                                                        <option>option 5</option>
-			                                                    </select> --}}
-
-			                                                    <input type="text" id="name" name="event_start_year" class="form-control" placeholder="Year">
-
-			                                                </div>
-			                                            </li>
-			                                            <li>
-			                                                <div class="form-item">
-			                                                   {{--  <select class="country-select">
-			                                                        <option selected="">Month</option>
-			                                                        <option>option 1</option>
-			                                                        <option>option 2</option>
-			                                                        <option>option 3</option>
-			                                                        <option>option 4</option>
-			                                                        <option>option 5</option>
-			                                                    </select> --}}
-
-			                                                    <input type="text" id="name" name="event_start_month" class="form-control" placeholder="Month">
-
-			                                                </div>
-			                                            </li>
-			                                            <li>
-			                                                <div class="form-item">
-			                                                    {{-- <select class="country-select">
-			                                                        <option selected="">Day</option>
-			                                                        <option>option 1</option>
-			                                                        <option>option 2</option>
-			                                                        <option>option 3</option>
-			                                                        <option>option 4</option>
-			                                                        <option>option 5</option>
-			                                                    </select> --}}
-
-			                                                    <input type="text" id="name" name="event_start_day" class="form-control" placeholder="Day">
-
+			                                                    <input type="date" id="name" name="event_start_year" class="form-control" placeholder="Year">
 			                                                </div>
 			                                            </li>
 			                                        </ul>
@@ -173,47 +133,7 @@
 			                                            </div>
 			                                            <li>
 			                                                <div class="form-item">
-			                                                    {{-- <select class="country-select">
-			                                                        <option selected="">Year</option>
-			                                                        <option>option 1</option>
-			                                                        <option>option 2</option>
-			                                                        <option>option 3</option>
-			                                                        <option>option 4</option>
-			                                                        <option>option 5</option>
-			                                                    </select> --}}
-
-			                                                    <input type="text" id="name" name="event_ends_year" class="form-control" placeholder="Year">
-
-			                                                </div>
-			                                            </li>
-			                                            <li>
-			                                                <div class="form-item">
-			                                                    {{-- <select class="country-select">
-			                                                        <option selected="">Month</option>
-			                                                        <option>option 1</option>
-			                                                        <option>option 2</option>
-			                                                        <option>option 3</option>
-			                                                        <option>option 4</option>
-			                                                        <option>option 5</option>
-			                                                    </select> --}}
-
-			                                                    <input type="text" id="name" name="event_ends_month" class="form-control" placeholder="Month">
-
-			                                                </div>
-			                                            </li>
-			                                            <li>
-			                                                <div class="form-item">
-			                                                    {{-- <select class="country-select">
-			                                                        <option selected="">Day</option>
-			                                                        <option>option 1</option>
-			                                                        <option>option 2</option>
-			                                                        <option>option 3</option>
-			                                                        <option>option 4</option>
-			                                                        <option>option 5</option>
-			                                                    </select> --}}
-
-			                                                    <input type="text" id="name" name="event_ends_day" class="form-control" placeholder="Day">
-
+			                                                    <input type="date" id="name" name="event_ends_year" class="form-control" placeholder="Year">
 			                                                </div>
 			                                            </li>
 			                                        </ul>
@@ -340,7 +260,7 @@
 			                                                                        <option>option 5</option>
 			                                                                    </select> --}}
 
-			                                                                    <input type="text" id="name" name="ticket_expiry_year" class="form-control" placeholder="Year">
+			                                                                    <input type="date" id="name" name="ticket_expiry_year" class="form-control" placeholder="Year">
 
 			                                                                </div>
 			                                                            </li>
@@ -356,7 +276,7 @@
 			                                                                        <option>option 5</option>
 			                                                                    </select> --}}
 
-			                                                                    <input type="text" id="name" name="ticket_expiry_month" class="form-control" placeholder="Month">
+			                                                                    <input type="date" id="name" name="ticket_expiry_month" class="form-control" placeholder="Month">
 
 			                                                                </div>
 			                                                            </li>
@@ -371,7 +291,7 @@
 			                                                                        <option>option 5</option>
 			                                                                    </select> --}}
 
-			                                                                    <input type="text" id="name" name="ticket_expiry_day" class="form-control" placeholder="Day">
+			                                                                    <input type="date" id="name" name="ticket_expiry_day" class="form-control" placeholder="Day">
 
 			                                                                </div>
 			                                                            </li>
