@@ -28,7 +28,7 @@
     <link rel="stylesheet" type="text/css" href="{{URL::to('assets/css/animate.css')}}">
     <link rel="stylesheet" type="text/css" href="{{URL::to('assets/css/owl.carousel.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{URL::to('assets/css/owl.theme.default.min.css')}}">
-
+    
     <!-- others css include -->
     <link rel="stylesheet" type="text/css" href="{{URL::to('assets/css/magnific-popup.css')}}">
     <link rel="stylesheet" type="text/css" href="{{URL::to('assets/css/jquery.mCustomScrollbar.min.css')}}">

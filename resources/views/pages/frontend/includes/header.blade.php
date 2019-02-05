@@ -24,7 +24,7 @@
                         <div class="mainmenu-wrapper">
                             <div class="row">
                                 <!-- menu-item-list - start -->
-                                <div class="col-lg-10">
+                                <div class="col-lg-12">
                                     <div class="menu-item-list ul-li clearfix">
                                         <ul>
                                             <li class="menu-item-has-children active">
@@ -65,7 +65,7 @@
                                                 </ul> -->
                                             </li>
                                             <li class="menu-item-has-children">
-                                            	<button class="btn btn-info create-event-button">
+                                            	<button class="btn btn-info create-event-button" style="margin-right: 5px;">
                                             		<a href="create-event.html" style="color:#fff; font-weight: 600;"> create Event	</a>
                                             	</button>
                                             </li>
@@ -73,26 +73,25 @@
                                             <li class="menu-item-has-children">
                                                 <form action="{{route('logout')}}" method="post">
                                                     {{csrf_field()}}
-                                                    <button class="btn btn-info create-event-button">
+                                                    <button class="btn btn-info create-event-button"  style="background: #ba4343; border-color: #ba4343">
                                                         Logout
                                                     </button>    
                                                 </form>
                                                 
                                             </li>
                                             @endauth
-                                        </ul>
-                                    </div>
-                                </div>
+                                        
                                 <!-- menu-item-list - end -->
                                 @guest
                                 <!-- menu-item-list - start -->
-                                <div class="col-lg-2">
-                                    <div class="user-search-btn-group ul-li clearfix">
-                                        <ul>
+                                
                                             <li>
+                                                <div class="col-lg-2">
+                                                    <div class="user-search-btn-group ul-li clearfix">
                                                 <a href="#login-modal" class="login-modal-btn">
                                                     <i class="fas fa-user"></i>
                                                 </a>
+                                            </div></div>
                                                 <div id="register-modal" class="reglog-modal-wrapper register-modal mfp-hide clearfix" style="background-image: url(assets/images/login-modal-bg.jpg);">
                                                     <div class="overlay-black clearfix">
 
@@ -277,6 +276,8 @@
                                         </ul>
                                     </div>
                                 </div>
+                                    </div>
+                                </div>
                                 <!-- menu-item-list - end -->
                                 @endguest
                             </div>
@@ -298,70 +299,6 @@
 
 	
 
-<!-- slide-section - start
-	================================================== -->
-
-	<section id="slide-section" class="slide-section clearfix">
-		<div id="main-carousel1" class="main-carousel1 owl-carousel owl-theme">
-
-			<div class="item" style="background-image: url(images/slider.jpg);">
-				<div class="overlay-black">
-					<div class="container">
-						<div class="slider-item-content">
-
-							<span class="medium-text">one stop</span>
-							<h1 class="big-text">Event Planner</h1>
-							<small class="small-text">every event sould be perfect</small>
-
-							<div class="link-groups">
-								<a href="#!" class="start-btn">get started!</a>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="item" style="background-image: url(images/tech_slider.jpg);">
-				<div class="overlay-black">
-					<div class="container">
-						<div class="slider-item-content">
-
-							<span class="medium-text">one stop</span>
-							<h1 class="big-text">Event Planner</h1>
-							<small class="small-text">every event sould be perfect</small>
-
-							<div class="link-groups">
-								<a href="about.html" class="about-btn custom-btn">about us</a>
-								<a href="#!" class="start-btn">get started!</a>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="item" style="background-image: url(images/sports_slider.jpg);">
-				<div class="overlay-black">
-					<div class="container">
-						<div class="slider-item-content">
-
-							<span class="medium-text">one stop</span>
-							<h1 class="big-text">Event Planner</h1>
-							<small class="small-text">every event sould be perfect</small>
-
-							<div class="link-groups">
-								<a href="about.html" class="about-btn custom-btn">about us</a>
-								<a href="#!" class="start-btn">get started!</a>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</section>
-<!-- slide-section - end
-	================================================== -->
 
 @endsection
 

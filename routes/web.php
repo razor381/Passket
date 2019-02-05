@@ -38,7 +38,6 @@ Route::post('create-event', 'CreateEventController@createEvent');
 
 Auth::routes();
 
-
 Route:: group(
 	[
 		'namespace' => 'Events',

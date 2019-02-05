@@ -1,4 +1,4 @@
-@extends('pages.frontend.layouts.master')
+@extends('pages.frontend.layouts.master2')
 
 @section('content')
 
@@ -13,15 +13,19 @@
 
 						<!-- breadcrumb-title - start -->
 						<div class="breadcrumb-title text-center mb-50">
-							<span class="sub-title">Passket events</span>
-							<h2 class="big-title">Passket <strong>event</strong></h2>
+							<span class="sub-title"></span>
+							<h2 class="big-title"> <strong></strong></h2>
 						</div>
 						<!-- breadcrumb-title - end -->
 						<!-- breadcrumb-list - start -->
+
+						<div class="breadcrumb-title text-center mb-50">
+							<h2 class="big-title">Passket</h2>
+						</div>
 						<div class="breadcrumb-list">
 							<ul>
 								<li class="breadcrumb-item"><a href="{{URL::to('')}}" class="breadcrumb-link">Home</a></li>
-								<!-- <li class="breadcrumb-item active" aria-current="page">event search</li> -->
+								<li class="breadcrumb-item active" aria-current="page">event list</li>
 							</ul>
 						</div>
 						<!-- breadcrumb-list - end -->
