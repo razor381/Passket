@@ -61,7 +61,7 @@
 
 			                            <!-- billing-form - start -->
 			                            <div class="billing-form form-wrapper mb-50">
-			                                <form method="POST" action="{{url('/create-event')}}">
+			                                <form method="POST" action="{{url('/create-event')}}" enctype="multipart/form-data">
 			                                	@csrf
 			                                    <div class="form-group mb-30">
 			                                        <div class="form-label-group">

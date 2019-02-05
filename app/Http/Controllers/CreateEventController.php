@@ -44,6 +44,33 @@ class CreateEventController extends Controller
     public function createEvent(Request $request)
     {
 
+     /*   $this->validate($request, 
+            [
+                'event_name' => 'required|string',
+                'event_address' => 'required|string',
+                'event_venue_name' => 'required|string',
+                'event_started_at' => 'required',
+                'event_ends_at' => 'required',
+                'organizer_name' => 'required|string',
+                'organizer_email' => 'required|email',
+                'organizer_detail' => 'required|string',
+            ]
+        );*/
+
+        if($request->hasFile('photo')) {
+            $photo = $request->file('photo');
+            $ext = $photo->getClientOriginalExtension();
+            $photoName = time().'.'.$ext;
+
+            if($photo->move(public_path('images/'),$photoName)) {
+
+            }else {
+                echo 'error';
+            }
+
+        }
+
+
         $createEvent = Event::create(
             [
                 'event_name' => $request->event_name,
@@ -66,7 +93,7 @@ class CreateEventController extends Controller
                 'total_number' => $request->ticket_total_number,
                 'category' => $request->ticket_category,
                 'expiry_date' => $request->ticket_expiry_date,
-                'photo' => $request->ticket_photo,
+                'photo' => isset($photoName) ? $photoName: '',
                 'QR_code' => 'qr code',
                 'user_id' => auth()->user()->id,
                 'event_id' => $createEvent->id,
