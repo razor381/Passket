@@ -10,7 +10,7 @@ class Event extends Model
     	'id',
     	'event_name',
     	'event_address',
-    	'event_venue-name',
+    	'event_venue_name',
     	'event_category',
     	'event_detail',
     	'event_started_at',
@@ -20,16 +20,20 @@ class Event extends Model
     	'organizer_contact_number',
     	'organizer_detail',
     	'ticket_name',
-    	'ticket_name',
     	'ticket_number',
     	'ticket_max_number',
     	'ticket_min_number',
     	'ticket_category',
     	'ticket_expiry_date',
     	'ticket_cover',
-    	'is_active',
     	'remarks',
     	'user_id',
-    	'id'
+    	'is_active',
     ];
+
+    protected $hidden = [
+    	
+    	
+    ];
+
 }
