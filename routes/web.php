@@ -15,7 +15,9 @@ Route::get('/', 'PublicPageController@index');
 Route::get('event-detail', 'PublicPageController@eventDetail');
 Route::get('event-list', 'PublicPageController@eventList');
 Route::get('event-book', 'PublicPageController@eventBook');
-Route::get('create-event', 'PublicPageController@createEvent');
+Route::get('create-event', 'CreateEventController@createEventForm');
+Route::post('create-event', 'CreateEventController@createEvent');
+
 
 
 
@@ -33,4 +35,17 @@ Route::get('create-event', 'PublicPageController@createEvent');
 	}
 );*/
 
+<<<<<<< HEAD
 Auth::routes();
+=======
+Route:: group(
+	[
+		'namespace' => 'Events',
+		'prefix' => 'events',
+	],
+	function (){
+
+		Route::get('{id}/eventDetails', 'EventsController@fullEventDetail');
+	}
+);
+>>>>>>> 185ef45bfa617ba4db470368e8a6d30790a50750

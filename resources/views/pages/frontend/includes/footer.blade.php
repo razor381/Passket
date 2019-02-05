@@ -23,8 +23,8 @@
 										<i class="fas fa-map-marker-alt"></i>
 									</span>
 									<div class="info-content">
-										<p>Kantipur Engineering College</p>
-										<h3>Dhapakhel, Kathmandu</h3>
+										<p>Passket Event Booking</p>
+										<h3>381-NY</h3>
 									</div>
 								</div>
 							</div>
@@ -51,8 +51,8 @@
 										<i class="fas fa-phone"></i>
 									</span>
 									<div class="info-content">
-										<p><a href="#!">+9779847345361</a></p>
-										<h3><a href="#!">4436756, 4356789</a></h3>
+										<p><a href="#!">980-CONTACT</a></p>
+										<h3><a href="#!">980-BOOKING</a></h3>
 									</div>
 								</div>
 							</div>
@@ -70,34 +70,29 @@
 						<!-- site-logo-wrapper - start -->
 						<div class="site-logo-wrapper mb-30">
 							<a href="index-1.html" class="logo">
-								<img src="images/passket_logo.png" alt="logo_not_found">
-
+								<!-- <img src="images/passket_logo.png" alt="logo_not_found"> -->
+								<h1 style="color: #FFF;">PASSKET</h1>
 							</a>
 						</div>
 						<!-- site-logo-wrapper - end -->
 
-						<p class="mb-30">
-							Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.
+						<p class="mb-30" style="color: #FFF;">
+							Passket Event Management
+							All The Event listing and Event Management 
 						</p>
 
 						<!-- social-links - start -->
 						<div class="social-links ul-li">
-							<h3 class="social-title">network</h3>
+							<h3 class="social-title">Get Connected With Us</h3>
 							<ul>
 								<li>
 									<a href="#!"><i class="fab fa-facebook-f"></i></a>
 								</li>
 								<li>
-									<a href="#!"><i class="fab fa-twitter"></i></a>
-								</li>
-								<li>
-									<a href="#!"><i class="fab fa-twitch"></i></a>
-								</li>
-								<li>
-									<a href="#!"><i class="fab fa-google-plus-g"></i></a>
-								</li>
-								<li>
 									<a href="#!"><i class="fab fa-instagram"></i></a>
+								</li>
+								<li>
+									<a href="#!"><i class="fab fa-twitter"></i></a>
 								</li>
 							</ul>
 						</div>
@@ -111,15 +106,13 @@
 				<div class="col-lg-3 col-md-6 col-sm-12">
 					<div class="usefullinks-wrapper ul-li-block">
 						<h3 class="footer-item-title">
-							useful <strong>links</strong>
+							Quick <strong>links</strong>
 						</h3>
 						<ul>
-							<li><a href="#!">Birthday Party</a></li>
-							<li><a href="#!">Business meeting</a></li>
-							<li><a href="#!">Conference</a></li>
-							<li><a href="#!">Food Event</a></li>
-							<li><a href="#!">Musical Event</a></li>
-							<li><a href="#!">Wedding Party</a></li>
+							<li><a href="{{URL::to('/event-list')}}">Event Listing</a></li>
+							<li><a href="{{URL::to('/create-event')}}">Create Event</a></li>
+							<li><a href="{{URL::to('/event-book')}}">Event Booking</a></li>
+							<li><a href="{{URL::to('/event-detail')}}">Event Details</a></li>
 						</ul>
 						
 					</div>
@@ -136,9 +129,7 @@
 							<li><a href="#!">About Passket</a></li>
 							<li><a href="#!">Disclaimer</a></li>
 							<li><a href="#!">Contact us</a></li>
-							<li><a href="#!">Events Schedule</a></li>
 							<li><a href="#!">Sponsors</a></li>
-							<li><a href="#!">Venues</a></li>
 						</ul>
 						
 					</div>
