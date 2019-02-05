@@ -84,6 +84,7 @@ class CreateEventController extends Controller
                 'organizer_email' => $request->organizer_email,
                 'organizer_contact_number' => $request->organizer_contact_number,
                 'organizer_detail' => $request->organizer_detail,
+                'user_id' => auth()->user()->id,
 
             ]
         );
