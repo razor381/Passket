@@ -67,14 +67,24 @@
                                             <li class="menu-item-has-children">
                                             	<button class="btn btn-info create-event-button">
                                             		<a href="create-event.html" style="color:#fff; font-weight: 600;"> create Event	</a>
-                                            		
                                             	</button>
                                             </li>
+                                            @auth
+                                            <li class="menu-item-has-children">
+                                                <form action="{{route('logout')}}" method="post">
+                                                    {{csrf_field()}}
+                                                    <button class="btn btn-info create-event-button">
+                                                        Logout
+                                                    </button>    
+                                                </form>
+                                                
+                                            </li>
+                                            @endauth
                                         </ul>
                                     </div>
                                 </div>
                                 <!-- menu-item-list - end -->
-
+                                @guest
                                 <!-- menu-item-list - start -->
                                 <div class="col-lg-2">
                                     <div class="user-search-btn-group ul-li clearfix">
@@ -120,31 +130,47 @@
 									                              	Have an account? <a href="#login-modal" class="login-modal-btn">Login</a>
 												                </span>
                                                             </div>
+                                                            <div id="errorMessageRegister" class="alert alert-danger">
+                                                                <span>Something went wrong. Please try again.</span>
+                                                            </div>
                                                             <div class="login-form text-center mb-50">
-                                                                <form action="#!">
+                                                                <div>
+                                                                  @if($errors->all() != null)
+                                                                    @foreach($errors->all() as $error)
+                                                                    <div class="alert alert-danger">
+                                                                      {{$error}}
+                                                                    </div>
+                                                                    @endforeach
+                                                                  @endif
+                                                                </div>
+                                                                <form id="register" action="{{route('register')}}" method="post">
+                                                                    {{csrf_field()}}
                                                                     <div class="form-item">
-                                                                        <input type="text" placeholder="User Name">
+                                                                        <input type="text" id="name" name="name" placeholder="User Name">
+                                                                        <span class="text-danger" id="errorName"></span>
                                                                     </div>
                                                                     <div class="form-item">
-                                                                        <input type="email" placeholder="Email Address">
+                                                                        <input type="email" id="email" name="email" placeholder="Email Address">
+                                                                        <span class="text-danger" id="errorEmail"></span>
+
                                                                     </div>
                                                                     <div class="form-item">
-                                                                        <input type="password" placeholder="Password">
+                                                                        <input type="number" id="phone" name="phone" placeholder="Phone number">
+                                                                        <span class="text-danger" id="errorPhone"></span>
+
                                                                     </div>
                                                                     <div class="form-item">
-                                                                        <input type="password" placeholder="Confirm Password">
+                                                                        <input type="password" id="password" name="password" placeholder="Password">
+                                                                        <span class="text-danger" id="errorPassword"></span>
+
                                                                     </div>
-                                                                    <!-- <div class="select-client-type" id="selectClientType">
-												                                                            <input type="checkbox">
-												                                                            <label for="selectClientType">Please Check for Registering as Organizer</label>
-												                                                        </div> -->
-                                                                    <!-- <div class="human-verification text-left">
-																								                    <input type="checkbox" id="imnotarobot">
-																								                    <label for="imnotarobot">I'm not a robot</label>
-																								                    <span class="verification-image">
-																														<img src="assets/images/iamnotrobot.png" alt="Image_not_found">
-																													</span>
-																								                </div> -->
+                                                                    <div class="form-item">
+                                                                        <input type="password" id="confirmPassword" name="password_confirmation" placeholder="Confirm Password">
+                                                                    </div>
+                                                                    <div class="select-client-type" id="selectClientType">
+												                        <input type="checkbox" name="user-type" value="organizer">
+									                                    <label for="selectClientType">Please Check for Registering as Organizer</label>
+			                                                        </div>
                                                                     <button type="submit" class="passket-btn passket-btn-one">Sign Up</button>
                                                                 </form>
                                                             </div>
@@ -165,87 +191,94 @@
                                             </li>
                                             <li>
 
-                                                                                <div id="login-modal" class="reglog-modal-wrapper mfp-hide clearfix" style="background-image: url(assets/images/login-modal-bg.jpg);">
-                                                                                    <div class="overlay-black clearfix">
+                                            <div id="login-modal" class="reglog-modal-wrapper mfp-hide clearfix" style="background-image: url(assets/images/login-modal-bg.jpg);">
+                                                <div class="overlay-black clearfix">
 
-                                                                                        <!-- leftside-content - start -->
-                                                                                        <div class="leftside-content">
-                                                                                            <div class="site-logo-wrapper mb-80">
-                                                                                                <a href="#!" class="logo">
-                                                                                                    <img src="assets/images/2.site-logo.png" alt="logo_not_found">
-                                                                                                </a>
-                                                                                            </div>
-                                                                                            <div class="register-login-link mb-80">
-                                                                                                <ul>
-                                                                                                    <li class="active">
-                                                                                                    	<a href="#login-modal" class="login-modal-btn">
-                                                                                                    	    <i class="fas fa-lock"></i> Login
-                                                                                                    	</a>
-                                                                                                    </li>
-                                                                                                    <li >
-                                                                                                    	<a href="#register-modal" class="register-modal-btn">
-                                                                                                    	    <i class="fas fa-user"></i> Register 
-                                                                                                    	</a>
-                                                                                                    </li>
-                                                                                                </ul>
-                                                                                            </div>
-                                                                                            <div class="copyright-text">
-                                                                                                <p class="m-0">©2018 <a href="#!" class="yellow-color">.com</a> all right reserved, made with <i class="fas fa-heart"></i> </p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <!-- leftside-content - end -->
+                                                    <!-- leftside-content - start -->
+                                                    <div class="leftside-content">
+                                                        <div class="site-logo-wrapper mb-80">
+                                                            <a href="#!" class="logo">
+                                                                <img src="assets/images/2.site-logo.png" alt="logo_not_found">
+                                                            </a>
+                                                        </div>
+                                                        <div class="register-login-link mb-80">
+                                                            <ul>
+                                                                <li class="active">
+                                                                	<a href="#login-modal" class="login-modal-btn">
+                                                                	    <i class="fas fa-lock"></i> Login
+                                                                	</a>
+                                                                </li>
+                                                                <li >
+                                                                	<a href="#register-modal" class="register-modal-btn">
+                                                                	    <i class="fas fa-user"></i> Register 
+                                                                	</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="copyright-text">
+                                                            <p class="m-0">©2018 <a href="#!" class="yellow-color">.com</a> all right reserved, made with <i class="fas fa-heart"></i> </p>
+                                                        </div>
+                                                    </div>
+                                                    <!-- leftside-content - end -->
 
-                                                                                        <!-- rightside-content - start -->
-                                                                                        <div class="rightside-content text-center">
+                                                    <!-- rightside-content - start -->
+                                                    <div class="rightside-content text-center">
 
-                                                                                            <div class="mb-30">
-                                                                                                <h2 class="form-title title-large white-color">Account <strong>Login</strong></h2>
-                                                                                                <span class="form-subtitle white-color">Login to our website, or <a href="#register-modal" class="register-modal-btn">Register</a></span>
-                                                                                            </div>
+                                                        <div class="mb-30">
+                                                            <h2 class="form-title title-large white-color">Account <strong>Login</strong></h2>
+                                                            <span class="form-subtitle white-color">Login to our website, or <a href="#register-modal" class="register-modal-btn">Register</a></span>
+                                                        </div>
 
-                                                                                            <div class="fb-login-btn mb-30">
-                                                                                                <a href="#!">
-                                                                                                    <span class="icon">
-                                            																<i class="fab fa-facebook-f"></i>
-                                            															</span> login with facebook
-                                                                                                </a>
-                                                                                            </div>
+                                                        <div class="fb-login-btn mb-30">
+                                                            <a href="#!">
+                                                                <span class="icon">
+        																<i class="fab fa-facebook-f"></i>
+        															</span> login with facebook
+                                                            </a>
+                                                        </div>
 
-                                                                                            <div class="or-text mb-30">
-                                                                                                <span>or sign in</span>
-                                                                                            </div>
+                                                        <div class="or-text mb-30">
+                                                            <span>or sign in</span>
+                                                        </div>
+                                                        <div id="errorMessage" class="alert alert-danger">
+                                                            <span>Email or Password does not match.</span>
+                                                        </div>
+                                                        <div class="login-form text-center mb-50">
+                                                            <form id="login" action="" method="post">
 
-                                                                                            <div class="login-form text-center mb-50">
-                                                                                                <form action="#!">
-                                                                                                    <div class="form-item">
-                                                                                                        <input type="email" placeholder="example@gmail.com">
-                                                                                                    </div>
-                                                                                                    <div class="form-item">
-                                                                                                        <input type="password" placeholder="Password">
-                                                                                                    </div>
-                                                                                                    <button type="submit" class="passket-btn passket-btn-one">Sign In</button>
-                                                                                                </form>
-                                                                                            </div>
+                                                                <div class="form-item">
+                                                                    <input type="email" id="emailLogin" name="email" placeholder="example@gmail.com">
+                                                                        <span class="text-danger" id="errorEmailLogin"></span>
 
-                                                                                            <div class="bottom-text white-color">
-                                                                                                <p class="m-0"><a href="">Forget Password</a></p>
-                                                                                            </div>
+                                                                </div>
+                                                                <div class="form-item">
+                                                                    <input type="password" id="passwordLogin" name="password" placeholder="Password">
+                                                                        <span class="text-danger" id="errorPasswordLogin"></span>
 
-                                                                                        </div>
-                                                                                        <!-- rightside-content - end -->
+                                                                </div>
+                                                                <button type="submit" class="passket-btn passket-btn-one">Sign In</button>
+                                                            </form>
+                                                        </div>
 
-                                                                                        <a class="popup-modal-dismiss" href="#!">
-                                                                                            <i class="fas fa-times"></i>
-                                                                                        </a>
+                                                        <div class="bottom-text white-color">
+                                                            <p class="m-0"><a href="">Forget Password</a></p>
+                                                        </div>
 
-                                                                                    </div>
-                                                                                </div>
+                                                    </div>
+                                                    <!-- rightside-content - end -->
+
+                                                    <a class="popup-modal-dismiss" href="#!">
+                                                        <i class="fas fa-times"></i>
+                                                    </a>
+
+                                                </div>
+                                            </div>
                                           	</li>
                                         </ul>
                                     </div>
                                 </div>
                                 <!-- menu-item-list - end -->
-
+                                @endguest
                             </div>
                         </div>
                     </div>
@@ -330,6 +363,143 @@
 <!-- slide-section - end
 	================================================== -->
 
+@endsection
 
+@section('scripts')
 
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#errorMessageRegister').hide();
+            $('#errorMessage').hide();
+
+        });
+        $('#register').submit(function(e){
+            e.preventDefault();
+            $.ajax({
+                type:'post',
+                url:'{{route("register")}}',
+                data:{
+                    '_token':'{{csrf_token()}}',
+                    'name':$('#name').val(),
+                    'email':$('#email').val(),
+                    'password':$('#password').val(),
+                    'password_confirmation':$('#confirmPassword').val(),
+                    'phone':$('#phone').val(),
+                },
+                async:false,
+                success:function(data){
+                    
+                    if(data.status=='success'){
+                        window.location.replace("{{url('/')}}");
+                    }
+                     if(data.status=='failed'){
+                        $('#errorMessageRegister').show();
+                        // $('#errorMessageRegister').append('Something went wrong. Please try again.');
+                    }
+                },
+                error:function (error) {
+
+                   if (error.status === 413){
+
+                       console.log('unknown error');
+
+                   } else if (error.status === 422){
+
+                       var invalid = JSON.parse(error.responseText);
+
+                       console.log(invalid);
+
+                       if (invalid.name !== 'undefined'){
+
+                           $('#errorName').empty();
+
+                           $('#errorName').append(invalid.errors.name);
+
+                       }
+
+                       if (invalid.email !== 'undefined'){
+
+                           $('#errorEmail').empty();
+
+                           $('#errorEmail').append(invalid.errors.email);
+
+                       }
+
+                       if (invalid.phone !== 'undefined'){
+
+                           $('#errorPhone').empty();
+
+                           $('#errorPhone').append(invalid.errors.phone);
+
+                       }
+
+                       if (invalid.password !== 'undefined'){
+
+                           $('#errorPassword').empty();
+
+                           $('#errorPassword').append(invalid.errors.password);
+
+                       }
+                   }
+
+               }
+
+            });
+        });
+
+        $('#login').submit(function(e){
+            e.preventDefault();
+            $.ajax({
+                type:'post',
+                url:'{{route("login")}}',
+                data:{
+                    '_token':'{{csrf_token()}}',
+                    'email':$('#emailLogin').val(),
+                    'password':$('#passwordLogin').val(),
+                },
+                async:false,
+                success:function(data){
+                    
+                    if(data.status=='success'){
+                        window.location.replace("{{url('/')}}");
+                    }
+                    if(data.status=='failed'){
+                        $('#errorMessage').show();
+                        // $('#errorMessage').append('Email or Password does not match.');
+                    }
+                },
+                error:function (error) {
+
+                   if (error.status === 413){
+
+                       console.log('unknown error');
+
+                   } else if (error.status === 422){
+
+                       var invalid = JSON.parse(error.responseText);
+
+                       console.log(invalid);
+
+                       if (invalid.email !== 'undefined'){
+
+                           $('#errorEmailLogin').empty();
+
+                           $('#errorEmailLogin').append(invalid.errors.email);
+
+                       }
+
+                       if (invalid.password !== 'undefined'){
+
+                           $('#errorPasswordLogin').empty();
+
+                           $('#errorPasswordLogin').append(invalid.errors.password);
+
+                       }
+                   }
+
+               }
+
+            });
+        });
+    </script>
 @endsection

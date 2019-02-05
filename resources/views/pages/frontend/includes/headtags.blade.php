@@ -34,6 +34,7 @@
     <link rel="stylesheet" type="text/css" href="{{URL::to('assets/css/jquery.mCustomScrollbar.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{URL::to('assets/css/calendar.css')}}">
     <link rel="stylesheet" type="text/css" href="{{URL::to('assets/css/lightcase.css')}}">
+    
 
     <!-- color switcher css include -->
     <link rel="stylesheet" type="text/css" href="{{URL::to('assets/css/colors/style-switcher.css')}}">
