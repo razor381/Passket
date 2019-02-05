@@ -62,7 +62,7 @@ class CreateEventController extends Controller
                 'ticket_category' => $request->ticket_category,
                 'ticket_expiry_date' => $request->ticket_expiry_year,
                 'ticket_cover' => $request->ticket_cover,
-                'user_id' => '1',
+                'user_id' => auth()->user()->id,
             ]
         );
 
