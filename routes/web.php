@@ -35,9 +35,9 @@ Route::post('create-event', 'CreateEventController@createEvent');
 	}
 );*/
 
-<<<<<<< HEAD
+
 Auth::routes();
-=======
+
 Route:: group(
 	[
 		'namespace' => 'Events',
@@ -48,4 +48,4 @@ Route:: group(
 		Route::get('{id}/eventDetails', 'EventsController@fullEventDetail');
 	}
 );
->>>>>>> 185ef45bfa617ba4db470368e8a6d30790a50750
+
