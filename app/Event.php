@@ -20,16 +20,10 @@ class Event extends Model
     	'organizer_email',
     	'organizer_contact_number',
     	'organizer_detail',
-    	'ticket_name',
-    	'ticket_number',
-    	'ticket_max_number',
-    	'ticket_min_number',
-    	'ticket_category',
-    	'ticket_expiry_date',
-    	'ticket_cover',
     	'remarks',
     	'user_id',
     	'is_active',
+    	'event_id',
     ];
 
     protected $hidden = [

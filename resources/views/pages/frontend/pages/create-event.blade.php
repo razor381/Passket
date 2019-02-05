@@ -215,7 +215,7 @@
 			                                                    <div class="form-group mb-50">
 			                                                        <div class="form-label-group">
 			                                                            <label>Picture</label>
-			                                                            <input type="file" id="name" name="ticket_cover">
+			                                                            <input type="file" id="name" name="photo">
 			                                                        </div>
 			                                                    </div>
 
@@ -232,7 +232,7 @@
 			                                                <form action="#"> --}}
 			                                                    <div class="col-xs-6 mb-30" style="padding: 0;">
 			                                                        <label for="ex3">Number of tickets</label>
-			                                                        <input class="form-control" id="ex3" name="ticket_number" type="text" placeholder="Enter total ticket numbers">
+			                                                        <input class="form-control" id="ex3" name="ticket_total_number" type="text" placeholder="Enter total ticket numbers">
 			                                                    </div>
 			                                                    <div class="form-group mb-30">
 			                                                        <div class="form-item">
@@ -263,7 +263,7 @@
 			                                                                        <option>option 5</option>
 			                                                                    </select> --}}
 
-			                                                                    <input type="date" id="name" name="ticket_expiry_year" class="form-control" placeholder="Year">
+			                                                                    <input type="date" id="name" name="ticket_expiry_date" class="form-control" placeholder="Year">
 
 			                                                                </div>
 			                                                            </li>
@@ -279,7 +279,7 @@
 			                                                                        <option>option 5</option>
 			                                                                    </select> --}}
 
-			                                                                    <input type="date" id="name" name="ticket_expiry_month" class="form-control" placeholder="Month">
+			                                                                    {{-- <input type="date" id="name" name="ticket_expiry_month" class="form-control" placeholder="Month"> --}}
 
 			                                                                </div>
 			                                                            </li>
@@ -294,7 +294,7 @@
 			                                                                        <option>option 5</option>
 			                                                                    </select> --}}
 
-			                                                                    <input type="date" id="name" name="ticket_expiry_day" class="form-control" placeholder="Day">
+			                                                                    {{-- <input type="date" id="name" name="ticket_expiry_day" class="form-control" placeholder="Day"> --}}
 
 			                                                                </div>
 			                                                            </li>

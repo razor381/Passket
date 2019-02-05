@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Event;
+use App\ticket_table;
+use App\ticket_category;
 
 class CreateEventController extends Controller
 {
@@ -55,18 +57,31 @@ class CreateEventController extends Controller
                 'organizer_email' => $request->organizer_email,
                 'organizer_contact_number' => $request->organizer_contact_number,
                 'organizer_detail' => $request->organizer_detail,
-                'ticket_name' => $request->ticket_name,
-                'ticket_number' => $request->ticket_number,
-                'ticket_max_number' => $request->ticket_max_number,
-                'ticket_min_number' => $request->ticket_min_number,
-                'ticket_category' => $request->ticket_category,
-                'ticket_expiry_date' => $request->ticket_expiry_year,
-                'ticket_cover' => $request->ticket_cover,
-                'user_id' => auth()->user()->id,
+
             ]
         );
 
-        if($createEvent) {
+        $createTicket = ticket_table::create(
+            [
+                'total_number' => $request->ticket_total_number,
+                'category' => $request->ticket_category,
+                'expiry_date' => $request->ticket_expiry_date,
+                'photo' => $request->ticket_photo,
+                'QR_code' => 'qr code',
+                'user_id' => auth()->user()->id,
+                'event_id' => $createEvent->id,
+            ]
+        );
+
+        $ticketCategory = ticket_category::create(
+            [
+                'category' => 'gold',
+                'price' => 2000,
+                'event_id' => $createEvent->id,
+            ]
+        );
+
+        if($createEvent && $createTicket && $ticketCategory) {
             return redirect('/');
         }
         return redirect()->back()->with('error', 'Error creating event');

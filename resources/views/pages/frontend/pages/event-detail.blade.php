@@ -2,7 +2,8 @@
 
 @section('content')
 
-
+@if(count($singleEventDetails)>0)
+@endif
 		<!-- breadcrumb-section - start
 		================================================== -->
 		<section id="breadcrumb-section" class="breadcrumb-section clearfix">

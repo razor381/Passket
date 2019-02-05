@@ -249,7 +249,7 @@
 												</div>
 											</li>
 											<li>
-												<a href="{{url('events/'.$eventList->id.'/eventDetails')}}" class="tickets-details-btn" style="margin:10px;">
+												<a href="{{url('events/eventDetails/'.$eventList->id)}}" class="tickets-details-btn" style="margin:10px;">
 													Event Full Details
 												</a>
 											</li>

@@ -41,8 +41,9 @@
 
 		<!-- booking-timeout-section - start
 		================================================== -->
-		@if(count($singleEventDetails)>0)
-			@foreach($singleEventDetails as $key=>$eventDetails)
+		<!-- @if(!empty($singleEventDetails)) -->
+			<!-- @foreach($singleEventDetails as $key=>$eventDetails) -->
+			
 				<section id="booking-timeout-section" class="booking-timeout-section clearfix" style="background-image: url(images/special-offer-bg.png);">
 					<div class="container">
 						<div class="row">
@@ -95,12 +96,12 @@
 											<i class="fas fa-bookmark"></i>
 											Featured Event
 										</span> -->
-										<h2 class="event-title">Istanbul <strong>Wine Party 2018</strong></h2>
+										<h2 class="event-title">{{$eventDetails->event_name}}<strong>Wine Party 2018</strong></h2>
 									</div>
 
 									<div id="event-details-carousel" class="event-details-carousel owl-carousel owl-theme">
 										<div class="item">
-											<img src="assets/images/event/event-details-1.jpg" alt="Image_not_found">
+											<img src="{{URL::to('assets/images/event/event-details-1.jpg')}} "alt="Image_not_found">
 										</div>
 										<div class="item">
 											<img src="assets/images/event/event-details-2.jpg" alt="Image_not_found">
@@ -181,7 +182,7 @@
 													<div id="day1hall1" class="tab-pane fade">
 														<div class="hall-item clearfix">
 															<div class="hall-image">
-																<img src="assets/images/event/1.hall.png" alt="Image_not_found">
+																<img src="{{url('https:/127.0.0.1/assets/images/event/1.hall.png')}}" alt="Image_not_found">
 															</div>
 															<div class="hall-content">
 																<h3 class="event-title title-large mb-15">01. Greeting <strong>Welcome</strong></h3>
@@ -1704,8 +1705,8 @@
 				</section>
 				<!-- event-details-section - end
 				================================================== -->
-		@endforeach
-	@endif
+		<!-- @endforeach -->
+	<!-- @endif											 -->
 
 
 

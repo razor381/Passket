@@ -29,4 +29,5 @@ class PublicPageController extends Controller
 		return view('pages.frontend.pages.create-event');
 	}
 
+
 }
