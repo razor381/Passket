@@ -21,7 +21,7 @@ class PublicPageController extends Controller
 	}
 
 	public function eventList() {
-		$eventLists= Event::get();
+		$eventLists= Event::paginate(5);
 		return view('pages.frontend.pages.event-list',compact('eventLists'));
 	}
 
