@@ -24,7 +24,7 @@
                         <div class="mainmenu-wrapper">
                             <div class="row">
                                 <!-- menu-item-list - start -->
-                                <div class="col-lg-10">
+                                <div class="col-lg-12">
                                     <div class="menu-item-list ul-li clearfix">
                                         <ul>
                                             <li class="menu-item-has-children active">
@@ -65,7 +65,7 @@
                                                 </ul> -->
                                             </li>
                                             <li class="menu-item-has-children">
-                                            	<button class="btn btn-info create-event-button">
+                                            	<button class="btn btn-info create-event-button" style="margin-right: 5px;">
                                             		<a href="create-event.html" style="color:#fff; font-weight: 600;"> create Event	</a>
                                             	</button>
                                             </li>
@@ -73,7 +73,7 @@
                                             <li class="menu-item-has-children">
                                                 <form action="{{route('logout')}}" method="post">
                                                     {{csrf_field()}}
-                                                    <button class="btn btn-info create-event-button">
+                                                    <button class="btn btn-info create-event-button"  style="background: #ba4343; border-color: #ba4343">
                                                         Logout
                                                     </button>    
                                                 </form>
