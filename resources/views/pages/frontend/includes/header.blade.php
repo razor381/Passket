@@ -80,19 +80,18 @@
                                                 
                                             </li>
                                             @endauth
-                                        </ul>
-                                    </div>
-                                </div>
+                                        
                                 <!-- menu-item-list - end -->
                                 @guest
                                 <!-- menu-item-list - start -->
-                                <div class="col-lg-2">
-                                    <div class="user-search-btn-group ul-li clearfix">
-                                        <ul>
+                                
                                             <li>
+                                                <div class="col-lg-2">
+                                                    <div class="user-search-btn-group ul-li clearfix">
                                                 <a href="#login-modal" class="login-modal-btn">
                                                     <i class="fas fa-user"></i>
                                                 </a>
+                                            </div></div>
                                                 <div id="register-modal" class="reglog-modal-wrapper register-modal mfp-hide clearfix" style="background-image: url(assets/images/login-modal-bg.jpg);">
                                                     <div class="overlay-black clearfix">
 
@@ -275,6 +274,8 @@
                                             </div>
                                           	</li>
                                         </ul>
+                                    </div>
+                                </div>
                                     </div>
                                 </div>
                                 <!-- menu-item-list - end -->
