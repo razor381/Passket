@@ -9,8 +9,8 @@ use App\Event;
 class EventsController extends Controller
 {
     //function for full event detail
-    public function fullEventDetail($id){
-        $eventdetail = Event::find($id);
-        return view('pages.frontend.pages.events.event-detail',compact('eventDetail'));
+    public function fullSingleEventDetails($id){
+        $singleEventDetails = Event::find($id);
+        return view('pages.frontend.pages.events.event-detail',compact('singleEventDetails'));
     }
 }

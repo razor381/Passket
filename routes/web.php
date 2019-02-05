@@ -46,7 +46,7 @@ Route:: group(
 	],
 	function (){
 
-		Route::get('{id}/eventDetails', 'EventsController@fullEventDetail');
+		Route::get('{id}/eventDetails', 'EventsController@fullSingleEventDetails');
 	}
 );
 

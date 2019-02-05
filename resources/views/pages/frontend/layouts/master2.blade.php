@@ -1,12 +1,10 @@
 @include('pages.frontend.includes.headtags')
 @include('pages.frontend.includes.header')
-@include('pages.frontend.includes.slider')
 @include('pages.frontend.includes.footer')
 @include('pages.frontend.includes.endtags')
 
 @yield('headtags')
 @yield('header')
-@yield('slider')
 @yield('content')
 @yield('footer')
 @yield('endtags')

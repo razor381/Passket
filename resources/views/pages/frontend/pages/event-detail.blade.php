@@ -1,26 +1,29 @@
-@extends('pages.frontend.layouts.master')
+@extends('pages.frontend.layouts.master2')
 
 @section('content')
 
 
 		<!-- breadcrumb-section - start
 		================================================== -->
-<!-- 		<section id="breadcrumb-section" class="breadcrumb-section clearfix">
+		<section id="breadcrumb-section" class="breadcrumb-section clearfix">
 			<div class="jarallax" style="background-image: url(assets/images/breadcrumb/0.breadcrumb-bg.jpg);">
 				<div class="overlay-black">
 					<div class="container">
 						<div class="row justify-content-center">
 							<div class="col-lg-6 col-md-12 col-sm-12">
- -->
+
 								<!-- breadcrumb-title - start -->
-								<!-- <div class="breadcrumb-title text-center mb-50">
-									<span class="sub-title">event single</span>
-									<h2 class="big-title">Passket <strong>event details</strong></h2>
-								</div> -->
+								<div class="breadcrumb-title text-center mb-50">
+									<span class="sub-title"></span>
+									<h2 class="big-title"> <strong></strong></h2>
+								</div>
 								<!-- breadcrumb-title - end -->
 
 								<!-- breadcrumb-list - start -->
-								<!-- <div class="breadcrumb-list">
+								<div class="breadcrumb-title text-center mb-50">
+									<h2 class="big-title">Passket</h2>
+								</div>
+								<div class="breadcrumb-list">
 									<ul>
 										<li class="breadcrumb-item"><a href="index-1.html" class="breadcrumb-link">Home</a></li>
 										<li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Events</a></li>
@@ -28,16 +31,16 @@
 									</ul>
 								</div> 
 								<!-- breadcrumb-list - end -->
-<!-- 
+
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>  -->
+		</section> 
 		<!-- breadcrumb-section - end
 		================================================== -->
-
+		
 
 		<!-- booking-timeout-section - start
 		================================================== -->

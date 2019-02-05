@@ -3294,7 +3294,7 @@
 		<div class="overlay-black sec-ptb-100">
 			<div class="container">
 
-				testimonial5-carousel - start
+				<!-- testimonial5-carousel - start -->
 				<div id="testimonial5-carousel" class="testimonial5-carousel owl-carousel owl-theme">
 				<div id="testimonial5-carousel" class="testimonial5-carousel owl-theme">
 
@@ -3303,11 +3303,11 @@
 							<i class="fas fa-quote-right"></i>
 						</span>
 						<p class="clients-comment white-text">
-							“Bring people together, or turn your passion into a business. Harmoni gives you everything you need to host your best event yet. lorem ipsum diamet. Bring people together, or turn your passion into a business. Harmoni gives you everything you need to host your best event yet.”
+							“For those of you in the cheap seats I'd like ya to clap your hands to this one; the rest of you can just rattle your jewelry!” 
 						</p>
 						<div class="client-info">
-							<h3 class="client-name theme-color">Jenni Hernandes</h3>
-							<span class="client-sub-title white-text">Graphic Designer</span>
+							<h3 class="client-name theme-color">John Lennon</h3>
+							<span class="client-sub-title white-text">Perhaps No intro needed</span>
 						</div>
 					</div>
 
