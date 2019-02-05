@@ -188,63 +188,67 @@
 				<div class="tab-content">
 					<div id="list-style" class="tab-pane fade">
 
-						<!-- event-item - start -->
-						<div class="event-list-item clearfix">
+					@if(count($eventLists)>0)
+						@foreach($eventLists as $key=>$eventList)
+							<!-- event-item - start -->
+							<div class="event-list-item clearfix">
 
-							<!-- event-image - start -->
-							<div class="event-image">
-								<div class="post-date">
-									<span class="date">26</span>
-									<small class="month">june</small>
+								<!-- event-image - start -->
+								<div class="event-image">
+									<div class="post-date">
+									
+										<span class="date">{{ date('d', strtotime($eventList->event_started_at))}}</span>
+										<small class="month">{{date('M', strtotime($eventList->event_started_at))}}</small>
+									</div>
+									<img src="assets/images/event/event-1.jpg" alt="Image_not_found">
 								</div>
-								<img src="assets/images/event/event-1.jpg" alt="Image_not_found">
+								<!-- event-image - end -->
+
+								<!-- event-content - start -->
+								<div class="event-content">
+									<div class="event-title mb-15">
+										<h3 class="title">
+											<strong>{{$eventList->event_name}}</strong>
+										</h3>
+										<span class="ticket-price yellow-color">Tickets Remainings {{$eventList->ticket_number}}</span>
+									</div>
+									<p class="discription-text mb-30">
+										{{$eventList->event_detail}}
+									</p>
+									<div class="event-info-list ul-li clearfix">
+										<ul>
+											<li>
+												<span class="icon">
+													<i class="fas fa-map-marker-alt"></i>
+												</span>
+												<div class="info-content">
+													<small>Event Venue</small>
+													<h3>{{$eventList->event_venue_name}}</h3>
+												</div>
+											</li>
+											<li>
+												<span class="icon">
+													<i class="fas fa-ticket-alt"></i>
+												</span>
+												<div class="info-content">
+													<small>Max Seats</small>
+													<h3>{{$eventList->ticket_number}}</h3>
+												</div>
+											</li>
+											<li>
+												<a href="{{url('events/'.$eventList->id.'/eventDetails')}}" class="tickets-details-btn">
+													Event Full Details
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!-- event-content - end -->
+
 							</div>
-							<!-- event-image - end -->
-
-							<!-- event-content - start -->
-							<div class="event-content">
-								<div class="event-title mb-15">
-									<h3 class="title">
-										Barcelona <strong>Food truck Festival 2018</strong>
-									</h3>
-									<span class="ticket-price yellow-color">Tickets from $52</span>
-								</div>
-								<p class="discription-text mb-30">
-									Lorem ipsum dollor site amet the best  consectuer diam nerdistin adipiscing elites sed diam nonummy nibh the ebest uismod delgas tincidunt ut laoreet dolore magna...
-								</p>
-								<div class="event-info-list ul-li clearfix">
-									<ul>
-										<li>
-											<span class="icon">
-												<i class="fas fa-microphone"></i>
-											</span>
-											<div class="info-content">
-												<small>Speaker</small>
-												<h3>jenny juis</h3>
-											</div>
-										</li>
-										<li>
-											<span class="icon">
-												<i class="fas fa-ticket-alt"></i>
-											</span>
-											<div class="info-content">
-												<small>Max Seats</small>
-												<h3>2,250 seats</h3>
-											</div>
-										</li>
-										<li>
-											<a href="#!" class="tickets-details-btn">
-												tickets & details
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<!-- event-content - end -->
-
-						</div>
-						<!-- event-item - end -->
-
+							<!-- event-item - end -->
+						@endforeach
+					@endif
 						<div class="pagination ul-li clearfix">
 							<ul>
 								<li class="page-item prev-item">
@@ -265,14 +269,16 @@
 
 					<div id="grid-style" class="tab-pane fade in active show">
 						<div class="row justify-content-center">
+						@if(count($eventLists)>0)
+							@foreach($eventLists as $key=>$eventList)
 							<!-- event-grid-item - start -->
 							<div class="col-lg-6 col-md-6 col-sm-12">
 								<div class="event-grid-item">
 									<!-- event-image - start -->
 									<div class="event-image">
 										<div class="post-date">
-											<span class="date">26</span>
-											<small class="month">june</small>
+											<span class="date">{{ date('d', strtotime($eventList->event_started_at))}}</span>
+											<small class="month">{{date('M', strtotime($eventList->event_started_at))}}</small>
 										</div>
 										<img src="assets/images/event/1.event-grid.jpg" alt="Image_not_found">
 									</div>
@@ -282,9 +288,9 @@
 									<div class="event-content">
 										<div class="event-title mb-30">
 											<h3 class="title">
-												Barcelona Food Truck Festival 2018-2019
+												{{$eventList->event_name}}	
 											</h3>
-											<span class="ticket-price yellow-color">Tickets from $52</span>
+											<span class="ticket-price yellow-color">Tickets Remainings {{$eventList->ticket_number}}</span>
 										</div>
 										<div class="event-post-meta ul-li-block mb-30">
 											<ul>
@@ -298,27 +304,28 @@
 													<span class="icon">
 														<i class="fas fa-map-marker-alt"></i>
 													</span>
-													Manhattan, New York
+													{{$eventList->event_venue_name}}
 												</li>
 											</ul>
 										</div>
-										<a href="#!" class="tickets-details-btn">
-											tickets & details
+										<a href="#!" class="custom-btn">
+											Event Full Details
 										</a>
 									</div>
 									<!-- event-content - end -->
 								</div>
 							</div>
 							<!-- event-grid-item - end -->
-
+							@endforeach
+						@endif
 							<!-- pagination - start -->
 							<div class="pagination ul-li clearfix">
 								<ul>
 									<li class="page-item prev-item">
 										<a class="page-link" href="#!">Prev</a>
 									</li>
-									<li class="page-item"><a class="page-link" href="#!">01</a></li>
-									<li class="page-item active"><a class="page-link" href="#!">02</a></li>
+									<li class="page-item active"><a class="page-link" href="#!">01</a></li>
+									<li class="page-item "><a class="page-link" href="#!">02</a></li>
 									<li class="page-item"><a class="page-link" href="#!">03</a></li>
 									<li class="page-item"><a class="page-link" href="#!">04</a></li>
 									<li class="page-item"><a class="page-link" href="#!">05</a></li>

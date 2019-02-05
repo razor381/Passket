@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Event;
 
 class PublicPageController extends Controller
 {
@@ -20,7 +21,8 @@ class PublicPageController extends Controller
 	}
 
 	public function eventList() {
-		return view('pages.frontend.pages.event-list');
+		$eventLists= Event::get();
+		return view('pages.frontend.pages.event-list',compact('eventLists'));
 	}
 
 	public function createEvent() {

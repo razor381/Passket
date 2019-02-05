@@ -17,6 +17,7 @@ Route::get('event-list', 'PublicPageController@eventList');
 Route::get('event-book', 'PublicPageController@eventBook');
 Route::get('create-event', 'PublicPageController@createEvent');
 
+
 /*Route::group(
 	[
 		'namespace' => 'Attendee',
@@ -30,3 +31,14 @@ Route::get('create-event', 'PublicPageController@createEvent');
 		Route::get('event-book', 'PublicPageController@eventBook');
 	}
 );*/
+
+Route:: group(
+	[
+		'namespace' => 'Events',
+		'prefix' => 'events',
+	],
+	function (){
+
+		Route::get('{id}/eventDetails', 'EventsController@fullEventDetail');
+	}
+);

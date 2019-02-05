@@ -2,6 +2,7 @@
 
 namespace App;
 
+
 use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
@@ -10,7 +11,7 @@ class Event extends Model
     	'id',
     	'event_name',
     	'event_address',
-    	'event_venue-name',
+    	'event_venue_name',
     	'event_category',
     	'event_detail',
     	'event_started_at',
@@ -19,7 +20,6 @@ class Event extends Model
     	'organizer_email',
     	'organizer_contact_number',
     	'organizer_detail',
-    	'ticket_name',
     	'ticket_name',
     	'ticket_number',
     	'ticket_max_number',
