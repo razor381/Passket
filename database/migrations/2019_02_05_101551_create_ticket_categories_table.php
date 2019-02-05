@@ -20,7 +20,7 @@ class CreateTicketCategoriesTable extends Migration
             $table->boolean('is_active')->default(true);
             $table->string('remarks')->nullable();
             $table->integer('event_id')->unsigned();
-            $table->foreign('event_id')->references('id')->on('ticket_tables');
+            // $table->foreign('event_id')->references('id')->on('ticket_tables');
             $table->timestamps();
         });
     }

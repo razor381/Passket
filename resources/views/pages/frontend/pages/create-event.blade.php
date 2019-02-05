@@ -339,6 +339,5 @@
 			    </div>
 			</section>
 
->>>>>>> 185ef45bfa617ba4db470368e8a6d30790a50750
 
 @endsection

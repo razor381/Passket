@@ -16,6 +16,7 @@ class ticket_table extends Model
     	'is_active',
     	'remarks',
     	'user_id',
+    	'event_id'
     ];
 
     protected $hidden = [

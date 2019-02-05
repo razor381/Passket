@@ -68,15 +68,16 @@ class CreateEventController extends Controller
                 'expiry_date' => $request->ticket_expiry_date,
                 'photo' => $request->ticket_photo,
                 'QR_code' => 'qr code',
-                'user_id' => 6,
-                'event-id' => 10,
+                'user_id' => auth()->user()->id,
+                'event_id' => $createEvent->id,
             ]
         );
 
         $ticketCategory = ticket_category::create(
             [
                 'category' => 'gold',
-                'price' => '2000',
+                'price' => 2000,
+                'event_id' => $createEvent->id,
             ]
         );
 

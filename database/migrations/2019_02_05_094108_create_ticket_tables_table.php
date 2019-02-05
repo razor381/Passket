@@ -23,9 +23,9 @@ class CreateTicketTablesTable extends Migration
             $table->boolean('is_active')->default(true);
             $table->string('remarks')->nullable();
             $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
+            // $table->foreign('user_id')->references('id')->on('users');
             $table->integer('event_id')->unsigned();
-            $table->foreign('event_id')->references('id')->on('events');
+            // $table->foreign('event_id')->references('id')->on('events');
             $table->timestamps();
         });
     }

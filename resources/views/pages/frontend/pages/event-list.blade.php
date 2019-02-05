@@ -180,13 +180,13 @@
 					</form>
 
 					<ul class="nav event-layout-btngroup">
-						<li><a data-toggle="tab" href="#list-style"><i class="fas fa-th-list"></i></a></li>
-						<li><a class="active" data-toggle="tab" href="#grid-style"><i class="fas fa-th"></i></a></li>
+						<li><a class="active" data-toggle="tab" href="#list-style"><i class="fas fa-th-list"></i></a></li>
+						<!--<li><a class="active" data-toggle="tab" href="#grid-style"><i class="fas fa-th"></i></a></li> -->
 					</ul>
 				</div>
 
 				<div class="tab-content">
-					<div id="list-style" class="tab-pane fade">
+					<div id="list-style" class="tab-pane fade in active show">
 
 					@if(count($eventLists)>0)
 						@foreach($eventLists as $key=>$eventList)
@@ -228,15 +228,24 @@
 											</li>
 											<li>
 												<span class="icon">
-													<i class="fas fa-ticket-alt"></i>
+														<i class="fas fa-ticket-alt"></i>
 												</span>
 												<div class="info-content">
-													<small>Max Seats</small>
+													<small>Ticket Price</small>
 													<h3>{{$eventList->ticket_number}}</h3>
 												</div>
 											</li>
 											<li>
-												<a href="{{url('events/'.$eventList->id.'/eventDetails')}}" class="tickets-details-btn">
+												<span class="icon">
+														<i class="fas fa-ticket-alt"></i>
+												</span>
+												<div class="info-content">
+													<small>Event Category</small>
+													<h3>{{$eventList->event_category}}</h3>
+												</div>
+											</li>
+											<li>
+												<a href="{{url('events/'.$eventList->id.'/eventDetails')}}" class="tickets-details-btn" style="margin:10px;">
 													Event Full Details
 												</a>
 											</li>
@@ -248,25 +257,17 @@
 							</div>
 							<!-- event-item - end -->
 						@endforeach
-					@endif
 						<div class="pagination ul-li clearfix">
 							<ul>
-								<li class="page-item prev-item">
-									<a class="page-link" href="#!">Prev</a>
-								</li>
-								<li class="page-item"><a class="page-link" href="#!">01</a></li>
-								<li class="page-item active"><a class="page-link" href="#!">02</a></li>
-								<li class="page-item"><a class="page-link" href="#!">03</a></li>
-								<li class="page-item"><a class="page-link" href="#!">04</a></li>
-								<li class="page-item"><a class="page-link" href="#!">05</a></li>
-								<li class="page-item next-item">
-									<a class="page-link" href="#!">Next</a>
-								</li>
+								{{ $eventLists->links() }}
 							</ul>
 						</div>
 
+					@endif
+						
 					</div>
-
+					<!-- commeting out the grid style -->
+					{{--	
 					<div id="grid-style" class="tab-pane fade in active show">
 						<div class="row justify-content-center">
 						@if(count($eventLists)>0)
@@ -337,8 +338,9 @@
 							<!-- pagination - end -->
 
 						</div>
-					</div>
+					</div>--}}
 				</div>
+				
 
 			</div>
 			<!-- - end -->

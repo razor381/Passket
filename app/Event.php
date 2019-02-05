@@ -23,6 +23,7 @@ class Event extends Model
     	'remarks',
     	'user_id',
     	'is_active',
+    	'event_id',
     ];
 
     protected $hidden = [
