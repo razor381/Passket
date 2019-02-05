@@ -156,20 +156,20 @@
 								<div class="ticket-buying-form form-wrapper">
 									<h3 class="form-title">ticket buyer</h3>
 
-									<form action="#">
+									<form method="post" action="{{url('/ticket-booking')}}">
+										@csrf
 										<div class="form-item">
-											<input type="text" placeholder="First Name">
+											<input type="text" id="name" name="name" placeholder="Name">
 										</div>
 										<div class="form-item">
-											<input type="text" placeholder="Last Name">
+											<input type="text" id="address" name="address" placeholder="Address">
 										</div>
 										<div class="form-item">
-											<input type="email" placeholder="Email Address">
+											<input type="email" id="email" name="email" placeholder="Email Address">
 										</div>
 										<div class="form-item">
-											<input type="email" placeholder="Confirm Email Address">
+											<input type="number" id="mobile" name="mobile" placeholder="Mobile number">
 										</div>
-									</form>
 
 								</div>
 							</div>
@@ -178,24 +178,24 @@
 							<!-- payment-form - start -->
 							<div class="col-lg-6 col-md-6 col-sm-12">
 								<div class="payment-form form-wrapper">
-									<h3 class="form-title">payment</h3>
+									<h3 class="form-title">ticket details</h3>
 
-									<form action="#">
+									
 										<div class="form-item">
-											<select class="cradit-card-select">
-												<option selected="">Select Credit Card</option>
-												<option>option 1</option>
-												<option>option 2</option>
-												<option>option 3</option>
-												<option>option 4</option>
-												<option>option 5</option>
+											<select name="ticket_category" class="cradit-card-select">
+												<option selected="">Select Ticket Category</option>
+												<option>Bronze</option>
+												<option>Silver</option>
+												<option>Gold</option>
+												<option>Platinum</option>
+												<option>VIP</option>
 											</select>
 										</div>
 										<div class="form-item">
-											<input type="text" placeholder="Card Numbers">
+											<input type="text" id="ticket_number" name="ticket_number" placeholder="Number of tickets">
 										</div>
 
-										<div class="expired-date-form">
+										<!-- <div class="expired-date-form">
 											<h3 class="title-text">expired date</h3>
 											<ul>
 
@@ -232,7 +232,16 @@
 												</li>
 
 											</ul>
+										</div> -->
+										<div class="form-item">
+											<span></span>
 										</div>
+										<div class="text-center">
+											<button type="submit" class="custom-btn">
+												book now
+											</button>
+										</div>
+
 									</form>
 								</div>
 							</div>
@@ -247,19 +256,19 @@
 
 
 					<!-- reg-info - start -->
-					<div class="reg-info mb-50">
+					<!-- <div class="reg-info mb-50"> -->
 
 						<!-- section-title - start -->
-						<div class="section-title mb-30">
+						<!-- <div class="section-title mb-30">
 							<h2 class="big-title">Questions <strong>Survey</strong></h2>
-						</div>
+						</div> -->
 						<!-- section-title - end -->
 
 						<!-- row - start -->
-						<div class="row">
+						<!-- <div class="row"> -->
 
 							<!-- ticket-buying-form - start -->
-							<div class="col-lg-12 col-md-12 col-sm-12">
+							<!-- <div class="col-lg-12 col-md-12 col-sm-12">
 								<div class="ticket-buying-form form-wrapper">
 
 									<form action="#">
@@ -280,29 +289,29 @@
 									</form>
 
 								</div>
-							</div>
+							</div> -->
 							<!-- ticket-buying-form - end -->
 
 							
 
-						</div>
+						<!-- </div> -->
 						<!-- row - end -->
 
-					</div>
+					<!-- </div> -->
 					<!-- reg-info - end -->
 
 
 					<!-- billing-info - start -->
-					<div class="billing-info mb-50">
+					<!-- <div class="billing-info mb-50"> -->
 
 						<!-- section-title - start -->
-						<div class="section-title mb-30">
+						<!-- <div class="section-title mb-30">
 							<h2 class="big-title">billing <strong>information</strong></h2>
-						</div>
+						</div> -->
 						<!-- section-title - end -->
 
 						<!-- billing-form - start -->
-						<div class="billing-form form-wrapper">
+						<!-- <div class="billing-form form-wrapper">
 							<form action="#">
 
 								<div class="form-item">
@@ -320,10 +329,10 @@
 								</div>
 								<div class="form-item">
 									<input type="text" placeholder="Altranative Address">
-								</div>
+								</div> -->
 
 								<!-- form-item-group - start -->
-								<div class="form-item-group mb-50">
+								<!-- <div class="form-item-group mb-50">
 									<ul>
 
 										<li>
@@ -350,20 +359,20 @@
 										</li>
 										
 									</ul>
-								</div>
+								</div> -->
 								<!-- form-item-group - end -->
 
-								<div class="text-center">
+								<!-- <div class="text-center">
 									<button type="submit" class="custom-btn">
 										pay now
 									</button>
 								</div>
 
 							</form>
-						</div>
+						</div> -->
 						<!-- billing-form - end -->
 
-					</div>
+					<!-- </div> -->
 					<!-- billing-info - end -->
 					
 				</div>

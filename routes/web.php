@@ -14,10 +14,12 @@
 Route::get('/', 'PublicPageController@index');
 Route::get('event-detail', 'PublicPageController@eventDetail');
 Route::get('event-list', 'PublicPageController@eventList');
-Route::get('event-book', 'PublicPageController@eventBook');
+// Route::get('event-book', 'PublicPageController@eventBook');
 Route::get('create-event', 'CreateEventController@createEventForm');
 Route::post('create-event', 'CreateEventController@createEvent');
 
+Route::get('event-book', 'BookingController@ticketBooking');
+Route::post('ticket-booking', 'BookingController@createBooking');
 
 
 
@@ -48,4 +50,6 @@ Route:: group(
 		Route::get('{id}/eventDetails', 'EventsController@fullEventDetail');
 	}
 );
+
+
 
