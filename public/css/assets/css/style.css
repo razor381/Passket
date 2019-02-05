@@ -5906,7 +5906,8 @@ button {
     .event-section .event-list-item .event-content .event-info-list ul li {
       margin-right: 10px; }
       .event-section .event-list-item .event-content .event-info-list ul li:last-child {
-        margin-right: 0px; }
+        margin-right: 0;
+      }
       .event-section .event-list-item .event-content .event-info-list ul li .icon {
         float: left;
         width: 40px;
