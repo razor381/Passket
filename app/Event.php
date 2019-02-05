@@ -27,9 +27,14 @@ class Event extends Model
     	'ticket_category',
     	'ticket_expiry_date',
     	'ticket_cover',
-    	'is_active',
     	'remarks',
     	'user_id',
-    	'id'
+    	'is_active',
     ];
+
+    protected $hidden = [
+    	
+    	
+    ];
+
 }
